@@ -1,0 +1,321 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+body {
+  background-color: #000;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: 0;
+}
+
+.container {
+  padding: 0 100px;
+}
+
+/* ----- Header ----- */
+
+header {
+  background-color: #000;
+}
+
+.nav {
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.nav,
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  gap: 25px;
+}
+
+.list li {
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.list li:hover {
+  color: #f82c56;
+}
+
+/* ----- Main Screen ----- */
+
+main {
+  background-image: url("../Images/bg.jpg");
+  background-size: contain;
+  height: 100vh;
+}
+
+.mainContent {
+  padding: 13% 100px;
+}
+
+.mainContent h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.mainContent p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.mainContent p span {
+  color: #4accf7;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 15px 30px;
+  color: #000;
+  background: #cfcf0e;
+  background: linear-gradient(
+    90deg,
+    rgba(207, 207, 14, 1) 0%,
+    rgba(250, 250, 92, 1) 50%,
+    rgba(207, 207, 14, 1) 100%
+  );
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.5s;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  box-shadow: 0px 0px 29px 0px rgba(207, 207, 14, 0.75);
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(207, 207, 14, 0.75);
+  -moz-box-shadow: 0px 0px 29px 0px rgba(207, 207, 14, 0.75);
+}
+
+/* ----- The closest concerts ----- */
+
+table {
+  margin: 50px auto;
+  border: 1px solid grey;
+  background-color: #151821;
+  border-spacing: 0;
+  border-radius: 20px;
+}
+
+.tableTitle {
+  font-size: 25px;
+  background-color: #1b1e29;
+  border-radius: 20px;
+}
+
+td {
+  padding: 20px 60px;
+  border-top: 1px solid grey;
+}
+
+td:last-child {
+  padding-right: 150px;
+}
+
+tr:nth-child(2) {
+  background-color: #1b1e29;
+}
+
+.buyTicket {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #f82c56;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.buyTicket:hover {
+  background-color: #be0f32;
+}
+
+/* ----- Participants ----- */
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  border-radius: 20px;
+  border: 1px solid grey;
+  background-color: #151821;
+}
+
+.card img {
+  width: 20vw;
+  height: 40vh;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card h3 {
+  padding: 10px 20px;
+}
+
+/* ----- History ----- */
+
+.history {
+  background: #121c21;
+  background: linear-gradient(
+    150deg,
+    rgba(18, 28, 33, 1) 0%,
+    rgba(38, 18, 25, 1) 100%
+  );
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.history h1 {
+  margin-bottom: 15px;
+}
+
+.historyTxt1 {
+  width: 65%;
+}
+
+.historyTxt2 {
+  width: 85%;
+}
+
+.historyImage {
+  position: absolute;
+  height: 20vh;
+  top: 120px;
+  right: 150px;
+}
+
+/* ----- Contact ----- */
+
+.contact {
+  padding: 100px;
+  background: #121c21;
+  background: linear-gradient(
+    300deg,
+    rgba(18, 28, 33, 1) 0%,
+    rgba(38, 18, 25, 1) 100%
+  );
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  margin-top: 25px;
+}
+
+.contact h1,
+.contact p {
+  text-align: center;
+}
+
+.contact h1 {
+  margin-bottom: 10px;
+}
+
+.contactForm {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexContact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.columnContact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.name {
+  margin-right: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  background-color: #151821;
+  border: 1px solid grey;
+  padding: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 15vw;
+  height: 3vh;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 98%;
+  height: 10vh;
+  border-radius: 7px;
+}
+
+.message {
+  margin-top: 20px;
+}
+
+.send {
+  background-color: #f82c56;
+  padding: 12px 25px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.send:hover {
+  background-color: #be0f32;
+}
+
+.contactCard h2 {
+  margin-bottom: 10px;
+}
+
+.contactCard {
+  padding: 25px;
+  background-color: #121c21;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+iframe {
+  border-radius: 10px;
+}
