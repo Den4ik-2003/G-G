@@ -21,6 +21,22 @@ a {
   text-decoration: none;
 }
 
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.opacity {
+  opacity: .2;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
 input,
 textarea {
   outline: 0;
@@ -160,6 +176,24 @@ tr:nth-child(2) {
 
 .concert {
   padding-top: 100px;
+  position: relative;
+}
+
+.concertModal {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 550px;
+  bottom: -650px;
+}
+
+.concertModal h1,
+.concertModal p {
+  color: #000;
 }
 
 /* ----- Participants ----- */
@@ -198,7 +232,7 @@ tr:nth-child(2) {
     rgba(18, 28, 33, 1) 0%,
     rgba(38, 18, 25, 1) 100%
   );
-  padding: 100px 50px;
+  padding: 100px;
   position: relative;
   color: #fff;
 }
@@ -339,6 +373,30 @@ iframe {
   border-radius: 10px;
 }
 
+.contactModalWindow h1 {
+  color: #000;
+}
+
+#modal {
+  position: relative;
+}
+
+.contactModalWindow {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 450px;
+  bottom: 50px;
+}
+
+#modalImage {
+  height: 50vh;
+}
+
 /* ----- Footer -----  */
 
 footer {
@@ -357,3 +415,4 @@ footer {
   justify-content: space-between;
   margin-bottom: 20px;
 }
+
