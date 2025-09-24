@@ -5,6 +5,10 @@
   color: #fff;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000;
 }
@@ -47,12 +51,12 @@ header {
   gap: 25px;
 }
 
-.list li {
+.list li a {
   cursor: pointer;
   transition: 0.5s;
 }
 
-.list li:hover {
+.list li a:hover {
   color: #f82c56;
 }
 
@@ -81,6 +85,10 @@ main {
 .mainContent p span {
   color: #4accf7;
   font-weight: 600;
+}
+
+.btnContainer {
+  padding-top: 25px;
 }
 
 .btn {
@@ -150,6 +158,10 @@ tr:nth-child(2) {
   background-color: #be0f32;
 }
 
+.concert {
+  padding-top: 100px;
+}
+
 /* ----- Participants ----- */
 
 .cards {
@@ -158,6 +170,7 @@ tr:nth-child(2) {
   justify-content: center;
   gap: 50px;
   margin-bottom: 50px;
+  padding-top: 100px;
 }
 
 .card {
@@ -180,22 +193,26 @@ tr:nth-child(2) {
 /* ----- History ----- */
 
 .history {
-  background: #121c21;
   background: linear-gradient(
     150deg,
     rgba(18, 28, 33, 1) 0%,
     rgba(38, 18, 25, 1) 100%
   );
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 50px;
+  position: relative;
+  color: #fff;
 }
 
 .history h1 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  position: relative; 
+  z-index: 2;
 }
 
 .historyTxt1 {
+  position: relative;
   width: 65%;
+  z-index: 2;
 }
 
 .historyTxt2 {
@@ -204,9 +221,10 @@ tr:nth-child(2) {
 
 .historyImage {
   position: absolute;
-  height: 20vh;
   top: 120px;
   right: 150px;
+  height: 20vh;
+  z-index: 1; 
 }
 
 /* ----- Contact ----- */
@@ -224,6 +242,7 @@ tr:nth-child(2) {
 .contacts {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 100px;
   margin-top: 25px;
 }
@@ -318,4 +337,23 @@ textarea {
 
 iframe {
   border-radius: 10px;
+}
+
+/* ----- Footer -----  */
+
+footer {
+  background-color: #000;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.flexFooter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flexFooter:first-child {
+  justify-content: space-between;
+  margin-bottom: 20px;
 }

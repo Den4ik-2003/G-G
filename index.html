@@ -21,10 +21,10 @@
         </li>
         <li>
           <ul class="list">
-            <li>Про гурт</li>
-            <li>Концерти</li>
-            <li>Галерея</li>
-            <li>Контакти</li>
+            <li><a href="#history">Про гурт</a></li>
+            <li><a href="#concert">Концерти</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#contact">Контакти</a></li>
           </ul>
         </li>
       </ul>
@@ -44,54 +44,58 @@
           емоції. Приєднуйся до нас на найближчих виступах і відчуй цей саунд
           наживо
         </p>
-        <input class="btn" type="button" value="ЗАКАЗАТИ КВИТОК" />
+        <div class="btnContainer">
+          <a href="#concert" class="btn">ЗАКАЗАТИ КВИТОК</a>
+        </div>
       </div>
     </main>
 
-    <table>
-      <tr>
-        <td colspan="4" class="tableTitle">Найближчі концерти</td>
-      </tr>
-      <tr>
-        <td>Місто/Заклад</td>
-        <td>К-сть місць</td>
-        <td colspan="2">Дата і час</td>
-      </tr>
-      <tr>
-        <td>Київ - Docker-G Pub</td>
-        <td>250</td>
-        <td>25.10.2025, 19:00</td>
-        <td>
-          <input type="button" class="buyTicket" value="Замовити квиток" />
-        </td>
-      </tr>
-      <tr>
-        <td>Львів - !FESTrepublic</td>
-        <td>400</td>
-        <td>01.11.2025, 20:00</td>
-        <td>
-          <input type="button" class="buyTicket" value="Замовити квиток" />
-        </td>
-      </tr>
-      <tr>
-        <td>Одеса - Зелен театр</td>
-        <td>700</td>
-        <td>09.11.2025, 19:30</td>
-        <td>
-          <input type="button" class="buyTicket" value="Замовити квиток" />
-        </td>
-      </tr>
-      <tr>
-        <td>Харків - ArtZavod</td>
-        <td>500</td>
-        <td>16.11.2025, 19:00</td>
-        <td>
-          <input type="button" class="buyTicket" value="Замовити квиток" />
-        </td>
-      </tr>
-    </table>
+    <div class="concert" id="concert">
+      <table>
+        <tr>
+          <td colspan="4" class="tableTitle">Найближчі концерти</td>
+        </tr>
+        <tr>
+          <td>Місто/Заклад</td>
+          <td>К-сть місць</td>
+          <td colspan="2">Дата і час</td>
+        </tr>
+        <tr>
+          <td>Київ - Docker-G Pub</td>
+          <td>250</td>
+          <td>25.10.2025, 19:00</td>
+          <td>
+            <input type="button" class="buyTicket" value="Замовити квиток" />
+          </td>
+        </tr>
+        <tr>
+          <td>Львів - !FESTrepublic</td>
+          <td>400</td>
+          <td>01.11.2025, 20:00</td>
+          <td>
+            <input type="button" class="buyTicket" value="Замовити квиток" />
+          </td>
+        </tr>
+        <tr>
+          <td>Одеса - Зелен театр</td>
+          <td>700</td>
+          <td>09.11.2025, 19:30</td>
+          <td>
+            <input type="button" class="buyTicket" value="Замовити квиток" />
+          </td>
+        </tr>
+        <tr>
+          <td>Харків - ArtZavod</td>
+          <td>500</td>
+          <td>16.11.2025, 19:00</td>
+          <td>
+            <input type="button" class="buyTicket" value="Замовити квиток" />
+          </td>
+        </tr>
+      </table>
+    </div>
 
-    <div class="cards containers">
+    <div id="gallery" class="cards containers">
       <div class="card">
         <img src="./Images/p1.jpg" alt="DJ" />
         <h3>Максим - гітара</h3>
@@ -106,7 +110,7 @@
       </div>
     </div>
 
-    <div class="history container">
+    <div id="history" class="history container">
       <h1>Наша історія</h1>
       <img class="historyImage" src="./Images/history-image.jpg" alt="Image" />
       <p class="historyTxt1">
@@ -136,30 +140,31 @@
       </p>
     </div>
 
-    <div class="contact">
+    <div id="contact" class="contact">
       <h1>Зв'яжись з нами</h1>
       <p>Хочеш заказати виступ або маєш питання? Пиши!</p>
       <div class="contacts">
         <div class="contactForm">
-          <form action="#">
+          <form id="myForm" action="https://example.com/submit" method="get">
             <div class="flexContact">
               <div class="columnContact name">
                 <label for="name"> Name </label>
-                <input type="text" />
+                <input name="name" id="name" type="text" />
               </div>
               <div class="columnContact">
                 <label for="email"> Email </label>
-                <input type="email" />
+                <input name="email" id="email" type="email" />
               </div>
             </div>
             <div class="columnContact">
               <label for="message" class="message">Повідомлення</label>
               <textarea
+              id="text"
                 name="message"
                 placeholder="Розкажи про свої іде..."
               ></textarea>
             </div>
-            <input class="send" type="button" value="Відправити" />
+            <button type="submit" id="send" class="send">Відправити</button>
           </form>
           <div></div>
         </div>
@@ -178,6 +183,23 @@
         </div>
       </div>
     </div>
+
+    <footer class="container">
+      <div class="flexFooter">
+        <p>&copy "Грим та грім". Всі права захищені.</p>
+        <div class="links flexFooter">
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">Facebook</a>
+        </div>
+      </div>
+      <div class="flexFooter">
+        <p>booking@lotoplay</p>
+        <p>+38 (099) 123-45-67</p>
+      </div>
+    </footer>
     <script src="./script/script.js"></script>
+    <!-- Frontend Developer - Denys Romanyshyn -
+    https://www.instagram.com/__d.e.n.4.i.k__21?igsh=MXZuenVodWhsdGk5Yg%3D%3D&utm_source=qr -->
   </body>
 </html>
