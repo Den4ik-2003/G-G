@@ -30,7 +30,7 @@ a {
 }
 
 .opacity {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 .modal-open {
@@ -50,6 +50,10 @@ textarea {
 
 header {
   background-color: #000;
+}
+
+.burger {
+  display: none;
 }
 
 .nav {
@@ -81,6 +85,7 @@ header {
 main {
   background-image: url("../Images/bg.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
   height: 100vh;
 }
 
@@ -187,7 +192,7 @@ tr:nth-child(2) {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 550px;
+  left: 35%;
   bottom: -650px;
 }
 
@@ -215,7 +220,6 @@ tr:nth-child(2) {
 
 .card img {
   width: 20vw;
-  height: 40vh;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -239,7 +243,7 @@ tr:nth-child(2) {
 
 .history h1 {
   margin-bottom: 20px;
-  position: relative; 
+  position: relative;
   z-index: 2;
 }
 
@@ -258,7 +262,7 @@ tr:nth-child(2) {
   top: 120px;
   right: 150px;
   height: 20vh;
-  z-index: 1; 
+  z-index: 1;
 }
 
 /* ----- Contact ----- */
@@ -389,12 +393,29 @@ iframe {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: 450px;
-  bottom: 50px;
+  left: 30%;
+  bottom: 120px;
 }
 
 #modalImage {
-  height: 50vh;
+  width: 300px;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 0;
+  padding-bottom: 70%;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* ----- Footer -----  */
@@ -416,3 +437,366 @@ footer {
   margin-bottom: 20px;
 }
 
+/* ----- Adaptation ----- */
+
+@media screen and (max-width: 1400px) {
+  td {
+    padding: 10px 30px;
+  }
+
+  main {
+    height: 95vh;
+  }
+
+  .concertModal {
+    bottom: -500px;
+  }
+
+  .concertModal img,
+  #modalImage {
+    width: 200px;
+  }
+
+  .concertModal h1 {
+    font-size: 24px;
+  }
+
+  .btn {
+    padding: 12px 26px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .historyImage {
+    height: 17vh;
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contacts {
+    flex-wrap: wrap;
+  }
+
+  .send {
+    width: 100%;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 20vw;
+  }
+
+  td:last-child {
+    padding-right: 50px;
+  }
+
+  .contactModalWindow {
+    bottom: 500px;
+  }
+
+  .contactModalWindow h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .contact,
+  .history {
+    padding: 50px;
+  }
+
+  .card img {
+    width: 220px;
+  }
+
+  .card {
+    width: 220px;
+  }
+
+  .cards,
+  .concert {
+    padding-top: 50px;
+  }
+
+  table {
+    margin: 0 auto;
+  }
+
+  main {
+    height: 90vh;
+  }
+
+  .concertModal {
+    bottom: -380px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .mainContent h1 {
+    font-size: 45px;
+  }
+
+  .mainContent p {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 12px 26px;
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .history {
+    padding: 50px;
+  }
+
+  .historyImage {
+    width: 30%;
+  }
+
+  .concertModal {
+    bottom: -450px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  td {
+    padding: 15px;
+  }
+
+  td:last-child {
+    padding-right: 15px;
+  }
+
+  main {
+    height: 80vh;
+  }
+
+  .card img {
+    width: 210px;
+  }
+
+  .card {
+    width: 210px;
+  }
+
+  .historyTxt1 {
+    width: 75%;
+  }
+
+  .historyTxt2 {
+    width: 100%;
+  }
+
+  .concertModal {
+    left: 30%;
+    bottom: -420px;
+  }
+
+  .contactModalWindow {
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card img {
+    width: 200px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 175px;
+  }
+
+  .nav {
+    padding: 0;
+  }
+
+  .historyImage {
+    width: 60%;
+    right: 50px;
+  }
+
+  .contact h1,
+  .history h1 {
+    font-size: 24px;
+  }
+
+  .contactCard {
+    padding: 15px;
+  }
+
+  .mainContent {
+    padding: 25px;
+  }
+
+  .mainContent h1 {
+    font-size: 36px;
+  }
+
+  main {
+    height: 60vh;
+  }
+
+  .tableTitle {
+    font-size: 18px;
+  }
+
+  .flexFooter {
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .flexFooter p {
+    margin: 0 auto;
+  }
+
+  footer {
+    margin: 0;
+  }
+
+  .concertModal {
+    left: 25%;
+    bottom: -250px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  table {
+    margin: 0 25px;
+  }
+
+  .concert {
+    width: 100%;
+    overflow-y: auto;
+  }
+
+  .mainContent {
+    padding: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  #list {
+    display: none;
+  }
+
+  .flexContact {
+    flex-wrap: wrap;
+  }
+
+  .historyTxt1,
+  .historyTxt2 {
+    width: 100%;
+  }
+
+  .flexContact {
+    justify-content: start;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+  }
+
+  .history {
+    padding: 20px;
+  }
+
+  .concertModal {
+    left: 20%;
+  }
+
+  .nav {
+    align-items: start;
+  }
+
+  .list li:first-child {
+    margin-top: 150px;
+  }
+
+  .list li {
+    margin-top: 20px;
+  }
+
+  .list li a {
+    font-size: 24px;
+  }
+
+  .concertModal {
+    width: 50%;
+    text-align: center;
+    bottom: -290px;
+  }
+
+  .contactModalWindow {
+    width: 50%;
+    text-align: center;
+    bottom: 485px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .concertModal {
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mainContent h1 {
+    font-size: 24px;
+  }
+
+  .list li a {
+    font-size: 18px;
+  }
+
+  .btn {
+    letter-spacing: 0px;
+    padding: 10px 22px;
+  }
+
+  main {
+    height: 40vh;
+  }
+
+  .mainContent p,
+  td,
+  .historyTxt1,
+  .historyTxt2 {
+    font-size: 14px;
+  }
+
+  .concertModal {
+    left: 20%;
+    bottom: -150px;
+  }
+
+  #modalImage {
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .concertModal {
+    left: 10%;
+    width: 70%;
+    text-align: center;
+  }
+}

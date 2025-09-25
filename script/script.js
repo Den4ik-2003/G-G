@@ -17,6 +17,15 @@ const buyTicket = [
   document.getElementById("buyTicket4"),
 ];
 const concertModal = document.getElementById("concertModal");
+const burger = document.getElementById("burger");
+const list = document.getElementById("list");
+const allWeb = document.getElementById("allWeb");
+const links = [
+  document.getElementById("link1"),
+  document.getElementById("link2"),
+  document.getElementById("link3"),
+  document.getElementById("link4"),
+];
 
 let emailPattern = /^[a-zA-Z0-9._%+-]{3,}@gmail\.com$/;
 
@@ -44,12 +53,11 @@ btn.addEventListener("click", function (event) {
     text.value.length > 3
   ) {
     showModal("Повідомлення успішно надіслане", "./Images/done.png");
-    form.submit(); 
+    form.submit();
   } else {
     showModal("Заповніть всі поля правильно", "./Images/error.png");
   }
 });
-
 
 clos.addEventListener("click", function () {
   hideModal();
@@ -69,4 +77,39 @@ buyTicket.forEach((buy) => {
     document.body.classList.add("modal-open");
     concert.classList.add("opacity");
   });
+});
+
+burger.addEventListener("click", function () {
+  if (burger.getAttribute("src") === "./Icons/burger.svg") {
+    burger.src = "./Icons/close.svg";
+    list.style.display = "block";
+    list.style.alignItems = "top";
+    allWeb.style.display = "none";
+  } else {
+    if (window.innerWidth < 650) {
+      allWeb.style.display = "block";
+      burger.src = "./Icons/burger.svg";
+      list.style.display = "none";
+    }
+  }
+});
+
+window.addEventListener("resize", function () {
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth < 650) {
+        allWeb.style.display = "block";
+        burger.src = "./Icons/burger.svg";
+        list.style.display = "none";
+      }
+    });
+  });
+
+  if (window.innerWidth < 650) {
+    list.style.display = "none";
+  }
+
+  if (window.innerWidth > 650) {
+    list.style.display = "flex";
+  }
 });
